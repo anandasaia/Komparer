@@ -37,7 +37,7 @@ def scrape(url):
     return e.extract(r.text)
 
 # product_data = []
-with open("search_results_urls.txt",'r') as urllist, open('search_results_output.jsonl','w') as outfile:
+with open("search_results_urls.txt",'r') as urllist, open('search_results_output.json','w') as outfile:
     for url in urllist.read().splitlines():
         data = scrape(url) 
         if data:
@@ -48,6 +48,6 @@ with open("search_results_urls.txt",'r') as urllist, open('search_results_output
                 outfile.write("\n")
                 # sleep(5)
 # convert to csv
-df=pd.read_json('search_results_output.jsonl')
+df=pd.read_json('search_results_output.json', lines=True)
 df.to_csv('out.csv')
-    
+   
