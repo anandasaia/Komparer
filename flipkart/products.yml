@@ -1,0 +1,22 @@
+products:
+    css: 'div._1AtVbE:nth-of-type(n+4) div._13oc-S'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: div._4rR01T
+            xpath: null
+            type: Text
+        price:
+            css: div._30jeq3
+            xpath: null
+            type: Text
+        rating:
+            css: div._3LWZlK
+            xpath: null
+            type: Text
+        reviews:
+            css: 'span:nth-of-type(3)'
+            xpath: null
+            type: Text
